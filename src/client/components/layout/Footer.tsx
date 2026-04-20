@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import { motion } from 'motion/react';
-import { ArrowUp, Heart, Instagram, Linkedin, Mail, Sparkles } from 'lucide-react';
+import { ArrowUp, Heart, Mail, Sparkles } from 'lucide-react';
+import { Instagram, Linkedin } from '@/components/icons/brand';
 import lilyLogo from '@/assets/brand/lily-logo.png';
 import { useLenis } from '@/lib/lenis';
 

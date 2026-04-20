@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
-import { Mail, Instagram, Linkedin, Send, Paperclip, Sparkles, ArrowRight, Phone } from 'lucide-react';
+import { Mail, Send, Paperclip, Sparkles, ArrowRight, Phone } from 'lucide-react';
+import { Instagram, Linkedin } from '@/components/icons/brand';
 import { useState } from 'react';
 
 type FormStatus = { kind: 'idle' } | { kind: 'sending' } | { kind: 'ok' } | { kind: 'error'; message: string };

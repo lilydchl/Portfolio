@@ -7,12 +7,12 @@ import {
   Lightbulb,
   CheckCircle2,
   Heart,
-  Instagram,
   X,
   ChevronLeft,
   ChevronRight,
   Image as ImageIcon,
 } from 'lucide-react';
+import { Instagram } from '@/components/icons/brand';
 import { Link, useParams } from 'react-router';
 import { Image } from '@/components/media/Image';
 import { Pushpin, pushpinColors } from '@/components/decor/Pushpin';
