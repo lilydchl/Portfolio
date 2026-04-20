@@ -93,6 +93,9 @@ importers:
       tailwindcss:
         specifier: ^4.0.0
         version: 4.2.2
+      tempus:
+        specifier: 1.0.0-dev.17
+        version: 1.0.0-dev.17(react@19.2.5)
       tsx:
         specifier: ^4.19.2
         version: 4.21.0
@@ -1367,6 +1370,14 @@ packages:
     resolution: {integrity: sha512-1MOpMXuhGzGL5TTCZFItxCc0AARf1EZFQkGqMm7ERKj8+Hgr5oLvJOVFcC+lRmR8hCe2S3jC4T5D7Vg/d7/fhA==}
     engines: {node: '>=6'}
 
+  tempus@1.0.0-dev.17:
+    resolution: {integrity: sha512-Umj1ILQ+4Shq84SmCR24VrVjBjfHMCVMAawI1v+BO0GEsXpNfhULl1V8zt6v6d1voDiaqXH61DUG5nquGC9Kag==}
+    peerDependencies:
+      react: '>=17.0.0'
+    peerDependenciesMeta:
+      react:
+        optional: true
+
   tinyglobby@0.2.16:
     resolution: {integrity: sha512-pn99VhoACYR8nFHhxqix+uvsbXineAasWm5ojXoN8xEwK5Kd3/TrhNn1wByuD52UxWRLy8pu+kRMniEi6Eq9Zg==}
     engines: {node: '>=12.0.0'}
@@ -2480,6 +2491,10 @@ snapshots:
   tailwindcss@4.2.2: {}
 
   tapable@2.3.2: {}
+
+  tempus@1.0.0-dev.17(react@19.2.5):
+    optionalDependencies:
+      react: 19.2.5
 
   tinyglobby@0.2.16:
     dependencies:
