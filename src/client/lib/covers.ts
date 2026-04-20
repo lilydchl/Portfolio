@@ -1,7 +1,7 @@
 import type { Picture } from './picture';
 
 const modules = import.meta.glob<Picture>(
-  '../assets/{projects,categories,shakes,igloo-projects}/**/*.{png,jpg,jpeg}',
+  '../assets/{projects,categories,shakes,igloo-projects,about,moodboard}/**/*.{png,jpg,jpeg}',
   { eager: true, query: '?w=256;512;1024&format=avif;webp;png&as=picture', import: 'default' },
 );
 
