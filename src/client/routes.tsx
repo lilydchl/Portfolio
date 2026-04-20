@@ -9,6 +9,7 @@ import { ShakeDuMoment } from './pages/ShakeDuMoment';
 import { ShakeDetail } from './pages/ShakeDetail';
 import { IglooProjects } from './pages/IglooProjects';
 import { IglooProjectDetail } from './pages/IglooProjectDetail';
+import { Contact } from './pages/Contact';
 
 export const routes: RouteObject[] = [
   {
@@ -23,7 +24,7 @@ export const routes: RouteObject[] = [
       { path: 'shake-du-moment', element: <ShakeDuMoment /> },
       { path: 'shake/:shakeId', element: <ShakeDetail /> },
       { path: 'igloo-projects', element: <IglooProjects /> },
-      { path: 'contact', element: <Placeholder title="Contact" /> },
+      { path: 'contact', element: <Contact /> },
       { path: '*', element: <Placeholder title="Page introuvable" /> },
     ],
   },
