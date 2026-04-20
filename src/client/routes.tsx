@@ -1,13 +1,14 @@
 import type { RouteObject } from 'react-router';
 import { RootLayout } from './root';
 import { Placeholder } from './pages/Placeholder';
+import { Home } from './pages/Home';
 
 export const routes: RouteObject[] = [
   {
     path: '/',
     Component: RootLayout,
     children: [
-      { index: true, element: <Placeholder title="Accueil" /> },
+      { index: true, element: <Home /> },
       { path: 'about', element: <Placeholder title="À propos" /> },
       { path: 'projects', element: <Placeholder title="Réalisations" /> },
       { path: 'project/:category/:projectId', element: <Placeholder title="Projet" /> },
