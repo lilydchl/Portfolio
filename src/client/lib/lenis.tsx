@@ -1,6 +1,5 @@
 import Lenis from 'lenis';
 import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from 'react';
-import { Tempus } from './tempus';
 
 const LenisContext = createContext<Lenis | null>(null);
 
@@ -21,12 +20,15 @@ export function LenisProvider({ children }: { children: ReactNode }) {
     ref.current = instance;
     setLenis(instance);
 
-    const unsubscribe = Tempus.add((time) => {
+    let rafId = 0;
+    const loop = (time: number) => {
       instance.raf(time);
-    }, { priority: 0 });
+      rafId = requestAnimationFrame(loop);
+    };
+    rafId = requestAnimationFrame(loop);
 
     return () => {
-      unsubscribe?.();
+      cancelAnimationFrame(rafId);
       instance.destroy();
       ref.current = null;
       setLenis(null);
