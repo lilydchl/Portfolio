@@ -16,7 +16,8 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store \
 FROM base AS build
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-RUN pnpm run build
+RUN --mount=type=cache,id=vite,target=/app/node_modules/.cache \
+    pnpm run build
 
 FROM base AS prod-deps
 COPY package.json pnpm-lock.yaml ./
