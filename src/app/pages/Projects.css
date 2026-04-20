@@ -1,0 +1,9 @@
+.polaroid-handwriting {
+  font-family: 'Homemade Apple', cursive !important;
+  font-size: 18px !important;
+  color: #2A2A2A !important;
+  line-height: 1.2 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
