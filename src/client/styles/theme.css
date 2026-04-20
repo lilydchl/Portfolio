@@ -128,3 +128,13 @@
 .font-script {
   font-family: var(--font-script);
 }
+
+.polaroid-handwriting {
+  font-family: var(--font-hand) !important;
+  font-size: 18px !important;
+  color: #2a2a2a !important;
+  line-height: 1.2 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}

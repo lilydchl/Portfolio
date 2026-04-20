@@ -2,6 +2,7 @@ import type { RouteObject } from 'react-router';
 import { RootLayout } from './root';
 import { Placeholder } from './pages/Placeholder';
 import { Home } from './pages/Home';
+import { Projects } from './pages/Projects';
 
 export const routes: RouteObject[] = [
   {
@@ -10,7 +11,7 @@ export const routes: RouteObject[] = [
     children: [
       { index: true, element: <Home /> },
       { path: 'about', element: <Placeholder title="À propos" /> },
-      { path: 'projects', element: <Placeholder title="Réalisations" /> },
+      { path: 'projects', element: <Projects /> },
       { path: 'project/:category/:projectId', element: <Placeholder title="Projet" /> },
       { path: 'shake-du-moment', element: <Placeholder title="Shake du moment" /> },
       { path: 'shake/:shakeId', element: <Placeholder title="Shake" /> },
