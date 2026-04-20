@@ -30,6 +30,9 @@ importers:
       '@fontsource/poppins':
         specifier: ^5.1.0
         version: 5.2.7
+      '@fontsource/sacramento':
+        specifier: ^5.2.8
+        version: 5.2.8
       '@fontsource/work-sans':
         specifier: ^5.1.0
         version: 5.2.8
@@ -511,6 +514,9 @@ packages:
 
   '@fontsource/poppins@5.2.7':
     resolution: {integrity: sha512-6uQyPmseo4FgI97WIhA4yWRlNaoLk4vSDK/PyRwdqqZb5zAEuc+Kunt8JTMcsHYUEGYBtN15SNkMajMdqUSUmg==}
+
+  '@fontsource/sacramento@5.2.8':
+    resolution: {integrity: sha512-f2G+HIFZ7PGUxJPlm+TT6eH0HnlAQigMOCDIHXO/112LaxYA7NsTX3rczkrJLxJnycl91XyQ/0GfGLwpBkAuiw==}
 
   '@fontsource/work-sans@5.2.8':
     resolution: {integrity: sha512-6LaHjVVgts+rnrcqvEkP2+iUB/jw1oDSYsGO0+TltAhnWki9Hnf/UGpgMQh2jcm0GEH8VqCPnq4PpmHLFzxXtQ==}
@@ -1720,6 +1726,8 @@ snapshots:
   '@fontsource/playfair-display@5.2.8': {}
 
   '@fontsource/poppins@5.2.7': {}
+
+  '@fontsource/sacramento@5.2.8': {}
 
   '@fontsource/work-sans@5.2.8': {}
 
