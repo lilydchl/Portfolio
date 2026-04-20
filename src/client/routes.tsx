@@ -4,8 +4,11 @@ import { Placeholder } from './pages/Placeholder';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Projects } from './pages/Projects';
+import { ProjectDetail } from './pages/ProjectDetail';
 import { ShakeDuMoment } from './pages/ShakeDuMoment';
+import { ShakeDetail } from './pages/ShakeDetail';
 import { IglooProjects } from './pages/IglooProjects';
+import { IglooProjectDetail } from './pages/IglooProjectDetail';
 
 export const routes: RouteObject[] = [
   {
@@ -15,11 +18,11 @@ export const routes: RouteObject[] = [
       { index: true, element: <Home /> },
       { path: 'about', element: <About /> },
       { path: 'projects', element: <Projects /> },
-      { path: 'project/:category/:projectId', element: <Placeholder title="Projet" /> },
+      { path: 'project/igloo/:projectId', element: <IglooProjectDetail /> },
+      { path: 'project/:category/:projectId', element: <ProjectDetail /> },
       { path: 'shake-du-moment', element: <ShakeDuMoment /> },
-      { path: 'shake/:shakeId', element: <Placeholder title="Shake" /> },
+      { path: 'shake/:shakeId', element: <ShakeDetail /> },
       { path: 'igloo-projects', element: <IglooProjects /> },
-      { path: 'project/igloo/:projectId', element: <Placeholder title="Projet Igloo" /> },
       { path: 'contact', element: <Placeholder title="Contact" /> },
       { path: '*', element: <Placeholder title="Page introuvable" /> },
     ],
