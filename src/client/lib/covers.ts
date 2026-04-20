@@ -2,7 +2,7 @@ import type { Picture } from './picture';
 
 const modules = import.meta.glob<Picture>(
   '../assets/{projects,categories,shakes,igloo-projects,about,moodboard}/**/*.{png,jpg,jpeg}',
-  { eager: true, query: '?w=256;512;1024&format=avif;webp;png&as=picture', import: 'default' },
+  { eager: true, query: '?w=256;512;1024&format=avif;webp&as=picture', import: 'default' },
 );
 
 const map: Record<string, Picture> = {};

@@ -17,9 +17,9 @@ import {
 import { Image } from '@/components/media/Image';
 import { Pushpin, pushpinColors } from '@/components/decor/Pushpin';
 import type { Picture } from '@/lib/picture';
-import iceCreamPhoto from '@/assets/moodboard/ice-cream.png?w=256;512&format=avif;webp;png&as=picture';
-import cheersPhoto from '@/assets/moodboard/cheers.png?w=256;512&format=avif;webp;png&as=picture';
-import voyagePhoto from '@/assets/moodboard/voyage.png?w=256;512&format=avif;webp;png&as=picture';
+import iceCreamPhoto from '@/assets/moodboard/ice-cream.png?w=256;512&format=avif;webp&as=picture';
+import cheersPhoto from '@/assets/moodboard/cheers.png?w=256;512&format=avif;webp&as=picture';
+import voyagePhoto from '@/assets/moodboard/voyage.png?w=256;512&format=avif;webp&as=picture';
 
 const concertPhoto =
   'https://images.unsplash.com/photo-1619973226698-b77a5b5dd14b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25jZXJ0JTIwY3Jvd2QlMjBtdXNpYyUyMGxpdmUlMjBzdGFnZXxlbnwxfHx8fDE3NzMzMTU2NDd8MA&ixlib=rb-4.1.0&q=80&w=1080';

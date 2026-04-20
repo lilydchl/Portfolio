@@ -3,10 +3,10 @@ import { motion } from 'motion/react';
 import { FileDown, Paperclip, Sparkles } from 'lucide-react';
 import { Image } from '@/components/media/Image';
 
-import lilyPortrait1 from '@/assets/home/lily-portrait-1.png?w=256;512;1024&format=avif;webp;png&as=picture';
-import lilyPortrait2 from '@/assets/home/lily-portrait-2.png?w=256;512;1024&format=avif;webp;png&as=picture';
-import pinkStripes from '@/assets/home/pink-stripes.png?w=256;512;1024&format=avif;webp;png&as=picture';
-import dolceVitaStrip from '@/assets/home/dolce-vita-strip.png?w=256;512&format=avif;webp;png&as=picture';
+import lilyPortrait1 from '@/assets/home/lily-portrait-1.png?w=256;512;1024&format=avif;webp&as=picture';
+import lilyPortrait2 from '@/assets/home/lily-portrait-2.png?w=256;512;1024&format=avif;webp&as=picture';
+import pinkStripes from '@/assets/home/pink-stripes.png?w=256;512;1024&format=avif;webp&as=picture';
+import dolceVitaStrip from '@/assets/home/dolce-vita-strip.png?w=256;512&format=avif;webp&as=picture';
 import cvImageUrl from '@/assets/home/cv-lily-dechalonge.png';
 
 export function Home() {
