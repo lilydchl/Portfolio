@@ -30,7 +30,7 @@ export function ShakeDuMoment() {
           >
             <Link
               to="/project/monde-glace/lgm"
-              className="font-accent inline-flex items-center gap-2 text-[#7A6F5D] hover:text-brand-pink transition-colors mb-8"
+              className="inline-flex items-center gap-2 text-[#7A6F5D] hover:text-brand-pink transition-colors mb-8"
             >
               <ArrowLeft className="w-5 h-5" />
               <span>Retour au projet LGM</span>
@@ -43,8 +43,8 @@ export function ShakeDuMoment() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center space-y-6"
           >
-            <h1 className="font-accent text-5xl md:text-7xl font-bold text-brand-rose">Shake du moment</h1>
-            <p className="font-accent text-xs md:text-sm tracking-widest text-brand-mute font-medium">
+            <h1 className="text-5xl md:text-7xl font-bold text-brand-rose">Shake du moment</h1>
+            <p className="text-xs md:text-sm tracking-widest text-brand-mute font-medium">
               COLLECTION DE SHAKES CRÉATIFS • LE MONDE DE LA GLACE
             </p>
           </motion.div>
@@ -58,7 +58,7 @@ export function ShakeDuMoment() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="bg-white rounded-3xl p-6 md:p-12 shadow-lg"
         >
-          <p className="font-accent text-base md:text-lg text-brand-soft-ink leading-relaxed">
+          <p className="text-base md:text-lg text-brand-soft-ink leading-relaxed">
             Depuis plusieurs années, <span className="font-semibold text-brand-pink">LGM – Le Glacier Moderne</span> a
             instauré une tradition créative particulièrement appréciée de sa clientèle :{' '}
             <span className="font-semibold">le milkshake signature du mois</span>. Chaque mois, un nouveau milkshake
@@ -100,11 +100,11 @@ export function ShakeDuMoment() {
                       )}
 
                       <div className="absolute inset-0 bg-gradient-to-t from-brand-pink via-brand-pink/95 to-brand-pink/90 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center p-8 z-10 pointer-events-none">
-                        <h3 className="font-accent text-white text-center font-bold text-2xl">{shake.name}</h3>
+                        <h3 className="text-white text-center font-bold text-2xl">{shake.name}</h3>
                       </div>
 
                       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 group-hover:opacity-0 transition-opacity duration-300">
-                        <h3 className="font-accent text-white font-semibold text-lg">{shake.name}</h3>
+                        <h3 className="text-white font-semibold text-lg">{shake.name}</h3>
                       </div>
 
                       <button
@@ -141,13 +141,13 @@ export function ShakeDuMoment() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto px-4 md:px-8 text-center space-y-6 md:space-y-8"
         >
-          <h2 className="font-accent text-3xl md:text-5xl font-bold text-white">Découvrez tous mes projets</h2>
-          <p className="font-accent text-white/90 text-base md:text-lg">
+          <h2 className="text-3xl md:text-5xl font-bold text-white">Découvrez tous mes projets</h2>
+          <p className="text-white/90 text-base md:text-lg">
             Explorez l&apos;ensemble de mes réalisations.
           </p>
           <Link
             to="/projects"
-            className="font-accent inline-block px-8 md:px-12 py-4 md:py-5 bg-white text-brand-pink text-xs tracking-widest hover:bg-[#F5F1ED] transition-colors rounded-full shadow-lg hover:shadow-xl font-semibold"
+            className="inline-block px-8 md:px-12 py-4 md:py-5 bg-white text-brand-pink text-xs tracking-widest hover:bg-[#F5F1ED] transition-colors rounded-full shadow-lg hover:shadow-xl font-semibold"
           >
             VOIR TOUTES MES RÉALISATIONS
           </Link>

@@ -33,10 +33,10 @@ export function Home() {
             <Paperclip className="w-6 h-6 text-[#E8B5D4] absolute top-10 right-1/4 -rotate-45 opacity-50 hidden md:block" />
           </motion.div>
 
-          <h1 className="font-accent text-5xl md:text-8xl lg:text-9xl font-bold text-brand-ink">
+          <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold text-brand-ink">
             Portfolio
           </h1>
-          <p className="font-accent text-xs md:text-sm tracking-widest text-brand-mute font-medium px-4">
+          <p className="text-xs md:text-sm tracking-widest text-brand-mute font-medium px-4">
             ÉTUDIANTE EN COMMUNICATION • CRÉATIVE • COMMUNITY MANAGER
           </p>
         </motion.div>
@@ -78,7 +78,7 @@ export function Home() {
               className="absolute bottom-0 left-8 md:left-20 w-36 md:w-48 rotate-[-2deg] bg-white p-4 md:p-6 shadow-lg border border-[#F8E3F0]/50"
               whileHover={{ rotate: 2, scale: 1.05, transition: { duration: 0.3 } }}
             >
-              <p className="font-accent text-sm italic text-brand-ink">
+              <p className="text-sm italic text-brand-ink">
                 "Créer des histoires qui connectent"
               </p>
               <motion.div
@@ -97,11 +97,11 @@ export function Home() {
             className="space-y-8"
           >
             <div className="space-y-4">
-              <h3 className="font-accent text-xl tracking-wide font-semibold text-[#5D5347]">
+              <h3 className="text-xl tracking-wide font-semibold text-[#5D5347]">
                 BONJOUR, JE SUIS LILY
               </h3>
 
-              <p className="font-accent text-brand-soft-ink leading-relaxed">
+              <p className="text-brand-soft-ink leading-relaxed">
                 Étudiante en communication à l&apos;École du Numérique, je suis passionnée par la création
                 de contenu et le storytelling digital. Mon approche combine créativité, sensibilité aux
                 tendances et stratégie social media pour créer des univers visuels qui racontent des
@@ -112,7 +112,7 @@ export function Home() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 to="/about"
-                className="font-accent inline-block px-8 py-4 bg-brand-rose text-white text-xs tracking-widest hover:bg-[#C49595] transition-colors font-medium rounded-full shadow-lg"
+                className="inline-block px-8 py-4 bg-brand-rose text-white text-xs tracking-widest hover:bg-[#C49595] transition-colors font-medium rounded-full shadow-lg"
               >
                 EN SAVOIR PLUS
               </Link>
@@ -122,7 +122,7 @@ export function Home() {
               <a
                 href={cvImageUrl}
                 download="CV-Lily-de-Chalonge.png"
-                className="font-accent inline-flex items-center gap-2 px-8 py-4 bg-transparent text-brand-pink text-xs tracking-widest hover:bg-brand-pink hover:text-white transition-all font-medium rounded-full border-2 border-brand-pink shadow-md"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-transparent text-brand-pink text-xs tracking-widest hover:bg-brand-pink hover:text-white transition-all font-medium rounded-full border-2 border-brand-pink shadow-md"
               >
                 <FileDown className="w-4 h-4" />
                 TÉLÉCHARGER MON CV
@@ -211,7 +211,7 @@ export function Home() {
                     <p className="font-script text-sm lg:text-base text-brand-ink">
                       Lily&apos;s Portfolio
                     </p>
-                    <p className="font-accent text-[8px] lg:text-[10px] tracking-widest text-brand-mute mt-0.5">
+                    <p className="text-[8px] lg:text-[10px] tracking-widest text-brand-mute mt-0.5">
                       2024 — 2026
                     </p>
                   </motion.div>
@@ -222,7 +222,7 @@ export function Home() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 to="/projects"
-                className="font-accent inline-block px-8 py-4 bg-brand-rose text-white text-xs tracking-widest hover:bg-[#C49595] transition-colors font-medium rounded-full shadow-lg"
+                className="inline-block px-8 py-4 bg-brand-rose text-white text-xs tracking-widest hover:bg-[#C49595] transition-colors font-medium rounded-full shadow-lg"
               >
                 VOIR MES RÉALISATIONS
               </Link>

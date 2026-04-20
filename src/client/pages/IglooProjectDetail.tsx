@@ -13,8 +13,8 @@ export function IglooProjectDetail() {
     return (
       <div className="min-h-screen bg-brand-cream flex items-center justify-center">
         <div className="text-center">
-          <h1 className="font-accent text-4xl font-bold text-brand-rose mb-4">Projet non trouvé</h1>
-          <Link to="/igloo-projects" className="font-accent text-brand-pink hover:underline">
+          <h1 className="text-4xl font-bold text-brand-rose mb-4">Projet non trouvé</h1>
+          <Link to="/igloo-projects" className="text-brand-pink hover:underline">
             Retour aux projets L&apos;Igloo
           </Link>
         </div>
@@ -35,7 +35,7 @@ export function IglooProjectDetail() {
           >
             <Link
               to="/igloo-projects"
-              className="font-accent inline-flex items-center gap-2 text-[#7A6F5D] hover:text-brand-pink transition-colors mb-8"
+              className="inline-flex items-center gap-2 text-[#7A6F5D] hover:text-brand-pink transition-colors mb-8"
             >
               <ArrowLeft className="w-5 h-5" />
               <span>Retour aux projets L&apos;Igloo</span>
@@ -48,8 +48,8 @@ export function IglooProjectDetail() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center space-y-6 mb-12"
           >
-            <h1 className="font-accent text-6xl font-bold text-brand-rose">{project.name}</h1>
-            <p className="font-accent text-sm tracking-widest text-brand-mute font-medium">
+            <h1 className="text-6xl font-bold text-brand-rose">{project.name}</h1>
+            <p className="text-sm tracking-widest text-brand-mute font-medium">
               L&apos;IGLOO • LE MONDE DE LA GLACE
             </p>
           </motion.div>
@@ -78,12 +78,12 @@ export function IglooProjectDetail() {
           className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
         >
           <div className="bg-white p-8 rounded-2xl shadow-lg">
-            <h3 className="font-accent text-sm tracking-widest text-brand-pink font-semibold mb-3">DATE</h3>
-            <p className="font-accent text-[#7A6F5D] text-lg">{project.date}</p>
+            <h3 className="text-sm tracking-widest text-brand-pink font-semibold mb-3">DATE</h3>
+            <p className="text-[#7A6F5D] text-lg">{project.date}</p>
           </div>
           <div className="bg-white p-8 rounded-2xl shadow-lg">
-            <h3 className="font-accent text-sm tracking-widest text-brand-pink font-semibold mb-3">CLIENT</h3>
-            <p className="font-accent text-[#7A6F5D] text-lg">{project.client}</p>
+            <h3 className="text-sm tracking-widest text-brand-pink font-semibold mb-3">CLIENT</h3>
+            <p className="text-[#7A6F5D] text-lg">{project.client}</p>
           </div>
         </motion.div>
 
@@ -98,7 +98,7 @@ export function IglooProjectDetail() {
           viewport={{ once: true }}
           className="bg-gradient-to-br from-brand-pink to-[#D4307E] p-12 rounded-3xl shadow-2xl"
         >
-          <h2 className="font-accent text-3xl font-bold text-white mb-8">Résultats</h2>
+          <h2 className="text-3xl font-bold text-white mb-8">Résultats</h2>
           <ul className="space-y-4">
             {project.resultats.map((resultat, index) => (
               <motion.li
@@ -110,7 +110,7 @@ export function IglooProjectDetail() {
                 className="flex items-start gap-4"
               >
                 <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0" />
-                <p className="font-accent text-white text-lg">{resultat}</p>
+                <p className="text-white text-lg">{resultat}</p>
               </motion.li>
             ))}
           </ul>
@@ -125,17 +125,17 @@ export function IglooProjectDetail() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto px-8 text-center space-y-8"
         >
-          <h2 className="font-accent text-5xl font-bold text-brand-rose">Découvrez mes autres projets</h2>
+          <h2 className="text-5xl font-bold text-brand-rose">Découvrez mes autres projets</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/igloo-projects"
-              className="font-accent inline-block px-12 py-5 bg-brand-pink text-white text-xs tracking-widest hover:bg-[#D4307E] transition-colors rounded-full shadow-lg hover:shadow-xl font-semibold"
+              className="inline-block px-12 py-5 bg-brand-pink text-white text-xs tracking-widest hover:bg-[#D4307E] transition-colors rounded-full shadow-lg hover:shadow-xl font-semibold"
             >
               AUTRES PROJETS L&apos;IGLOO
             </Link>
             <Link
               to="/projects"
-              className="font-accent inline-block px-12 py-5 bg-white text-brand-pink text-xs tracking-widest hover:bg-brand-cream transition-colors rounded-full shadow-lg hover:shadow-xl font-semibold"
+              className="inline-block px-12 py-5 bg-white text-brand-pink text-xs tracking-widest hover:bg-brand-cream transition-colors rounded-full shadow-lg hover:shadow-xl font-semibold"
             >
               TOUTES MES RÉALISATIONS
             </Link>
@@ -155,8 +155,8 @@ function Section({ title, delay, children }: { title: string; delay: number; chi
       viewport={{ once: true }}
       className="mb-12"
     >
-      <h2 className="font-accent text-3xl font-bold text-brand-rose mb-6">{title}</h2>
-      <p className="font-accent text-[#7A6F5D] text-lg leading-relaxed">{children}</p>
+      <h2 className="text-3xl font-bold text-brand-rose mb-6">{title}</h2>
+      <p className="text-[#7A6F5D] text-lg leading-relaxed">{children}</p>
     </motion.div>
   );
 }

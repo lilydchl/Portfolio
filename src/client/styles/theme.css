@@ -71,7 +71,6 @@
 
   --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Playfair Display", ui-serif, Georgia, serif;
-  --font-accent: "Poppins", ui-sans-serif, system-ui, sans-serif;
   --font-hand: "Homemade Apple", cursive;
   --font-script: "Sacramento", cursive;
 }
@@ -118,9 +117,6 @@
 }
 .font-serif {
   font-family: var(--font-serif);
-}
-.font-accent {
-  font-family: var(--font-accent);
 }
 .font-hand {
   font-family: var(--font-hand);

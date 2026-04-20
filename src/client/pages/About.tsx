@@ -40,15 +40,15 @@ function ExperienceCard({ to, title, company, bullets, logo, logoAlt, logoFit = 
   const content = (
     <>
       <div className="flex-1 min-w-0">
-        <h3 className="font-accent text-base md:text-lg font-bold mb-1 text-brand-pink">{title}</h3>
-        <p className="font-accent italic text-sm md:text-base mb-2 text-brand-pink">{company}</p>
-        <ul className="font-accent text-xs space-y-1 text-brand-ink">
+        <h3 className="text-base md:text-lg font-bold mb-1 text-brand-pink">{title}</h3>
+        <p className="italic text-sm md:text-base mb-2 text-brand-pink">{company}</p>
+        <ul className="text-xs space-y-1 text-brand-ink">
           {bullets.map((b) => (
             <li key={b}>• {b}</li>
           ))}
         </ul>
         {to && (
-          <div className="mt-3 pt-2 border-t border-[#E8B5D4]/30 flex items-center gap-2 text-xs tracking-wider opacity-60 group-hover:opacity-100 transition-opacity text-brand-pink font-accent">
+          <div className="mt-3 pt-2 border-t border-[#E8B5D4]/30 flex items-center gap-2 text-xs tracking-wider opacity-60 group-hover:opacity-100 transition-opacity text-brand-pink">
             <span>VOIR LE PROJET</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
           </div>
@@ -97,8 +97,8 @@ function TimelineEntry({ date, subtitle, delay, children }: TimelineEntryProps) 
     >
       <SparklePoint />
       <div className="mb-2">
-        <span className="font-accent text-base md:text-xl font-bold text-[#D4A5A5]">{date}</span>
-        {subtitle && <p className="font-accent text-sm md:text-base italic mt-0.5 text-brand-pink">{subtitle}</p>}
+        <span className="text-base md:text-xl font-bold text-[#D4A5A5]">{date}</span>
+        {subtitle && <p className="text-sm md:text-base italic mt-0.5 text-brand-pink">{subtitle}</p>}
       </div>
       {children}
     </motion.div>
@@ -126,10 +126,10 @@ function FormationCard({ title, location, bullets, badge, logo, logoAlt, childre
 
       <div className="relative z-10 flex items-start gap-4">
         <div className="flex-1 min-w-0">
-          <h3 className="font-accent text-base md:text-lg font-bold mb-1 text-brand-pink">{title}</h3>
-          <p className="font-accent italic text-sm md:text-base mb-3 text-brand-pink">{location}</p>
+          <h3 className="text-base md:text-lg font-bold mb-1 text-brand-pink">{title}</h3>
+          <p className="italic text-sm md:text-base mb-3 text-brand-pink">{location}</p>
           {children}
-          <ul className="font-accent text-sm space-y-1.5 text-brand-ink">
+          <ul className="text-sm space-y-1.5 text-brand-ink">
             {bullets.map((bullet, i) => (
               <li key={i}>• {bullet}</li>
             ))}
@@ -137,7 +137,7 @@ function FormationCard({ title, location, bullets, badge, logo, logoAlt, childre
           {badge && (
             <div className="mt-3">
               <span
-                className="font-accent inline-block px-3 py-1 text-xs rounded-full"
+                className="inline-block px-3 py-1 text-xs rounded-full"
                 style={
                   badge.variant === 'pink'
                     ? {
@@ -230,8 +230,8 @@ export function About() {
             className="absolute top-8 md:top-16 left-1/2 -translate-x-1/2 z-30 bg-[#F8F6F2] shadow-xl p-4 md:p-6 w-56 md:w-80 border-2 border-[#E8E5E0] rounded-[4px]"
           >
             <div className="text-center">
-              <p className="font-accent text-2xl tracking-widest mb-2 text-brand-ink">PORTFOLIO</p>
-              <p className="font-accent text-xs tracking-widest uppercase text-[#9B8B7E]">Lily de Chalonge</p>
+              <p className="text-2xl tracking-widest mb-2 text-brand-ink">PORTFOLIO</p>
+              <p className="text-xs tracking-widest uppercase text-[#9B8B7E]">Lily de Chalonge</p>
             </div>
           </motion.div>
 
@@ -276,12 +276,12 @@ export function About() {
           className="text-center mt-16 mb-8"
         >
           <h2
-            className="font-accent text-4xl md:text-7xl font-bold mb-6 text-brand-ink"
+            className="text-4xl md:text-7xl font-bold mb-6 text-brand-ink"
             style={{ letterSpacing: '0.02em' }}
           >
             LILY DE CHALONGE
           </h2>
-          <p className="font-accent text-base md:text-lg max-w-2xl mx-auto leading-relaxed text-brand-ink">
+          <p className="text-base md:text-lg max-w-2xl mx-auto leading-relaxed text-brand-ink">
             Découvrez mon parcours et commencez votre voyage pour devenir la meilleure version de vous-même dans le monde
             de la communication digitale.
           </p>
@@ -294,7 +294,7 @@ export function About() {
           className="text-center pt-8 border-t border-[#E8E5E0] overflow-hidden"
         >
           <div className="relative whitespace-nowrap">
-            <div className="inline-block about-scroll font-accent text-[#9B8B7E]">
+            <div className="inline-block about-scroll text-[#9B8B7E]">
               <span className="text-sm tracking-wider inline-block px-8">
                 Communication - Créativité - Community Management - Branding - Storytelling - Authenticité - Communication -
                 Créativité - Community Management - Branding - Storytelling - Authenticité - Communication - Créativité -
@@ -352,26 +352,26 @@ export function About() {
               <div className="absolute inset-1.5 sm:inset-2 md:inset-4 border border-[#C9A961] opacity-30 pointer-events-none" />
 
               <div className="text-center mb-4 sm:mb-8 pb-4 sm:pb-6 border-b-2 border-[#C9A961]">
-                <p className="font-accent text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] text-brand-ink mb-1 sm:mb-2">
+                <p className="text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] text-brand-ink mb-1 sm:mb-2">
                   À PROPOS DE LILY
                 </p>
                 <h3 className="font-serif text-2xl sm:text-4xl italic text-brand-ink">Portrait d&apos;une Créative</h3>
-                <p className="font-accent text-[10px] sm:text-xs text-[#9B8B7E] mt-1 sm:mt-2">— 2025 —</p>
+                <p className="text-[10px] sm:text-xs text-[#9B8B7E] mt-1 sm:mt-2">— 2025 —</p>
               </div>
 
               <div className="space-y-4 sm:space-y-6 relative z-10">
-                <p className="font-accent text-sm sm:text-base leading-relaxed text-brand-ink indent-4 sm:indent-8">
+                <p className="text-sm sm:text-base leading-relaxed text-brand-ink indent-4 sm:indent-8">
                   <span className="font-serif text-3xl sm:text-5xl float-left mr-2 sm:mr-3 mt-1 leading-none">É</span>
                   tudiante en BTS Communication à l&apos;École du Numérique, je suis passionnée par l&apos;univers de la
                   communication digitale et du community management. Mon approche allie créativité, stratégie et
                   authenticité pour créer des contenus qui touchent et engagent.
                 </p>
-                <p className="font-accent text-sm sm:text-base leading-relaxed text-brand-ink indent-4 sm:indent-8">
+                <p className="text-sm sm:text-base leading-relaxed text-brand-ink indent-4 sm:indent-8">
                   Mes expériences avec Le Monde de la Glace, Yvently et mes projets académiques m&apos;ont permis de
                   développer une expertise dans la création de contenus visuels, la gestion de communautés et le branding
                   événementiel. J&apos;aime créer des univers esthétiques qui racontent une histoire.
                 </p>
-                <p className="font-accent text-sm sm:text-base leading-relaxed text-brand-ink indent-4 sm:indent-8">
+                <p className="text-sm sm:text-base leading-relaxed text-brand-ink indent-4 sm:indent-8">
                   Mon style se caractérise par une attention particulière aux détails, une inspiration puisée dans
                   l&apos;aesthetic Pinterest, et une capacité à transformer chaque projet en une expérience mémorable. Je
                   crois en la puissance du storytelling et de l&apos;authenticité pour créer des connexions durables.
@@ -410,14 +410,14 @@ export function About() {
           <motion.a
             href={cvImageUrl}
             download="CV-Lily-de-Chalonge.png"
-            className="font-accent inline-flex items-center gap-3 px-10 py-5 bg-brand-pink text-white text-xs tracking-widest hover:bg-[#D4307E] transition-all font-medium rounded-full shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-brand-pink text-white text-xs tracking-widest hover:bg-[#D4307E] transition-all font-medium rounded-full shadow-lg hover:shadow-xl"
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
           >
             <FileDown className="w-5 h-5" />
             TÉLÉCHARGER MON CV
           </motion.a>
-          <p className="font-accent text-xs mt-3 italic text-[#9B8B7E]">Format PNG • Mis à jour en 2025</p>
+          <p className="text-xs mt-3 italic text-[#9B8B7E]">Format PNG • Mis à jour en 2025</p>
         </motion.div>
 
         {/* What's in my bag */}
@@ -451,7 +451,7 @@ export function About() {
           className="mt-32 mb-20"
         >
           <h2
-            className="font-accent text-3xl md:text-6xl font-bold mb-8 md:mb-12 text-center text-brand-ink"
+            className="text-3xl md:text-6xl font-bold mb-8 md:mb-12 text-center text-brand-ink"
             style={{ letterSpacing: '0.05em' }}
           >
             EXPÉRIENCES
@@ -567,7 +567,7 @@ export function About() {
           className="mt-20 mb-20"
         >
           <h2
-            className="font-accent text-3xl md:text-6xl font-bold mb-8 md:mb-12 text-center text-brand-ink"
+            className="text-3xl md:text-6xl font-bold mb-8 md:mb-12 text-center text-brand-ink"
             style={{ letterSpacing: '0.05em' }}
           >
             FORMATION
@@ -601,7 +601,7 @@ export function About() {
                   logo={ednLogo}
                   logoAlt="Logo École du Numérique"
                 >
-                  <p className="font-accent text-sm text-brand-ink mb-2">
+                  <p className="text-sm text-brand-ink mb-2">
                     2ème année de <strong>BTS Communication</strong>
                   </p>
                 </FormationCard>
@@ -660,7 +660,7 @@ export function About() {
           className="mb-32 relative"
         >
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="font-accent text-3xl md:text-6xl font-bold mb-6 text-[#D4A5A5]">Mes compétences</h2>
+            <h2 className="text-3xl md:text-6xl font-bold mb-6 text-[#D4A5A5]">Mes compétences</h2>
           </div>
 
           <div className="max-w-4xl mx-auto">

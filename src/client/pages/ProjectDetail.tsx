@@ -65,10 +65,10 @@ export function ProjectDetail() {
     return (
       <div className="min-h-screen bg-[#F5F1ED] flex items-center justify-center">
         <div className="text-center">
-          <h1 className="font-accent text-2xl md:text-4xl font-bold text-brand-ink mb-4">
+          <h1 className="text-2xl md:text-4xl font-bold text-brand-ink mb-4">
             Projet non trouvé
           </h1>
-          <Link to="/projects" className="font-accent text-brand-pink hover:underline">
+          <Link to="/projects" className="text-brand-pink hover:underline">
             Retour aux réalisations
           </Link>
         </div>
@@ -92,7 +92,7 @@ export function ProjectDetail() {
             >
               <Link
                 to="/projects"
-                className="font-accent inline-flex items-center gap-2 text-brand-soft-ink hover:text-brand-pink transition-colors text-sm md:text-base"
+                className="inline-flex items-center gap-2 text-brand-soft-ink hover:text-brand-pink transition-colors text-sm md:text-base"
               >
                 <ArrowLeft className="w-4 h-4 md:w-5 md:h-5" />
                 <span>Retour aux réalisations</span>
@@ -123,13 +123,13 @@ export function ProjectDetail() {
               />
               <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10 px-2 py-4 md:px-6 md:py-6">
                 <div className="flex-1">
-                  <span className="font-accent inline-block px-3 py-1.5 md:px-4 md:py-2 bg-brand-pink text-white rounded-full text-xs md:text-sm font-semibold mb-4 md:mb-5">
+                  <span className="inline-block px-3 py-1.5 md:px-4 md:py-2 bg-brand-pink text-white rounded-full text-xs md:text-sm font-semibold mb-4 md:mb-5">
                     {project.categoryLabel}
                   </span>
-                  <h1 className="font-accent text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-brand-ink">
+                  <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-brand-ink">
                     {project.name}
                   </h1>
-                  <div className="font-accent space-y-2 md:space-y-3 text-sm md:text-base text-brand-mute mb-6">
+                  <div className="space-y-2 md:space-y-3 text-sm md:text-base text-brand-mute mb-6">
                     <div className="flex items-center gap-2 md:gap-3">
                       <Calendar className="w-4 h-4 md:w-5 md:h-5 text-brand-pink flex-shrink-0" />
                       <span>{project.date}</span>
@@ -300,7 +300,7 @@ export function ProjectDetail() {
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-[#E8B5D4] rounded-full flex items-center justify-center flex-shrink-0">
                   <Target className="w-5 h-5 md:w-6 md:h-6 text-white" />
                 </div>
-                <h2 className="font-accent text-2xl md:text-4xl font-bold text-brand-ink">Cibles</h2>
+                <h2 className="text-2xl md:text-4xl font-bold text-brand-ink">Cibles</h2>
               </div>
               <div className="flex flex-wrap gap-3">
                 {project.cibles.map((cible, index) => (
@@ -310,7 +310,7 @@ export function ProjectDetail() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4, delay: index * 0.08 }}
                     viewport={{ once: true }}
-                    className="font-accent inline-flex items-center gap-2 px-5 py-2.5 rounded-full border text-brand-ink"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border text-brand-ink"
                     style={{
                       background: 'rgba(255, 214, 232, 0.25)',
                       borderColor: 'rgba(232, 70, 158, 0.25)',
@@ -339,7 +339,7 @@ export function ProjectDetail() {
               <div className="w-10 h-10 md:w-12 md:h-12 bg-brand-pink rounded-full flex items-center justify-center flex-shrink-0">
                 <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-white" />
               </div>
-              <h2 className="font-accent text-2xl md:text-4xl font-bold text-brand-ink">Résultats</h2>
+              <h2 className="text-2xl md:text-4xl font-bold text-brand-ink">Résultats</h2>
             </div>
             <ul className="space-y-4">
               {project.resultats.map((resultat, index) => (
@@ -352,7 +352,7 @@ export function ProjectDetail() {
                   className="flex items-start gap-4"
                 >
                   <CheckCircle2 className="w-6 h-6 text-brand-pink flex-shrink-0 mt-1" />
-                  <span className="font-accent text-base md:text-lg text-brand-soft-ink">{resultat}</span>
+                  <span className="text-base md:text-lg text-brand-soft-ink">{resultat}</span>
                 </motion.li>
               ))}
             </ul>
@@ -366,7 +366,7 @@ export function ProjectDetail() {
               viewport={{ once: true }}
               className="mb-16"
             >
-              <h2 className="font-accent text-2xl md:text-4xl font-bold mb-8 md:mb-12 text-center text-brand-ink">
+              <h2 className="text-2xl md:text-4xl font-bold mb-8 md:mb-12 text-center text-brand-ink">
                 {project.id === 'lgm' ? 'Projets LGM' : project.id === 'igloo' ? "Projets L'Igloo" : 'Projets'}
               </h2>
 
@@ -392,7 +392,7 @@ export function ProjectDetail() {
                         )}
 
                         <div className="absolute inset-0 bg-brand-pink opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center p-6 z-10 pointer-events-none">
-                          <h3 className="font-accent text-white text-center font-semibold text-lg">
+                          <h3 className="text-white text-center font-semibold text-lg">
                             {subProject.name}
                           </h3>
                         </div>
@@ -460,7 +460,7 @@ export function ProjectDetail() {
               <div className="bg-white rounded-xl border-[2.5px] border-[#3D3027] overflow-hidden">
                 <div className="bg-gradient-to-r from-[#F8D7E8] to-[#FBEAF2] border-b-[2.5px] border-[#3D3027] px-5 py-3 flex items-center justify-between">
                   <span
-                    className="font-accent text-[#3D3027] tracking-wider text-xs font-bold"
+                    className="text-[#3D3027] tracking-wider text-xs font-bold"
                     style={{ letterSpacing: '0.15em' }}
                   >
                     UN PROJET EN TÊTE ?
@@ -484,7 +484,7 @@ export function ProjectDetail() {
                 <div className="flex border-t-[2.5px] border-[#3D3027]">
                   <Link
                     to="/contact"
-                    className="font-accent flex-1 py-4 text-center text-brand-pink text-sm tracking-wider hover:bg-[#FDF2F7] transition-colors font-semibold"
+                    className="flex-1 py-4 text-center text-brand-pink text-sm tracking-wider hover:bg-[#FDF2F7] transition-colors font-semibold"
                     style={{ letterSpacing: '0.1em' }}
                   >
                     Me contacter 💌
@@ -492,7 +492,7 @@ export function ProjectDetail() {
                   <div className="w-[2.5px] bg-[#3D3027]" />
                   <Link
                     to="/projects"
-                    className="font-accent flex-1 py-4 text-center text-brand-mute text-sm tracking-wider hover:bg-[#F5F1ED] transition-colors font-semibold"
+                    className="flex-1 py-4 text-center text-brand-mute text-sm tracking-wider hover:bg-[#F5F1ED] transition-colors font-semibold"
                     style={{ letterSpacing: '0.1em' }}
                   >
                     Voir mes projets
@@ -608,9 +608,9 @@ function Section({
         >
           {icon}
         </div>
-        <h2 className="font-accent text-2xl md:text-4xl font-bold text-brand-ink">{title}</h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-brand-ink">{title}</h2>
       </div>
-      <p className="font-accent text-base md:text-lg text-brand-soft-ink leading-relaxed">{children}</p>
+      <p className="text-base md:text-lg text-brand-soft-ink leading-relaxed">{children}</p>
     </motion.div>
   );
 }

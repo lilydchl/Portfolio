@@ -77,7 +77,7 @@ function FolderTabButton({
         </svg>
       </motion.div>
       <span
-        className={`font-accent mt-1 text-xs font-semibold transition-colors text-center ${
+        className={`mt-1 text-xs font-semibold transition-colors text-center ${
           active ? 'text-brand-pink' : 'text-brand-soft-ink'
         }`}
       >
@@ -119,8 +119,8 @@ export function Projects() {
           transition={{ duration: 0.8 }}
           className="space-y-4 md:space-y-6"
         >
-          <h1 className="font-accent text-3xl md:text-5xl font-bold text-brand-rose">MES RÉALISATIONS</h1>
-          <p className="font-accent text-xs md:text-sm tracking-widest text-brand-mute font-medium px-2">
+          <h1 className="text-3xl md:text-5xl font-bold text-brand-rose">MES RÉALISATIONS</h1>
+          <p className="text-xs md:text-sm tracking-widest text-brand-mute font-medium px-2">
             DÉCOUVREZ MES PROJETS
           </p>
         </motion.div>
@@ -211,13 +211,13 @@ export function Projects() {
                       {activeCategory.label}
                     </h3>
 
-                    <p className="font-accent text-brand-ink text-sm leading-relaxed whitespace-pre-line">
+                    <p className="text-brand-ink text-sm leading-relaxed whitespace-pre-line">
                       {activeCategory.description}
                     </p>
 
                     <ul className="space-y-2">
                       {activeCategory.points.map((point) => (
-                        <li key={point} className="font-accent text-brand-ink text-sm flex items-start">
+                        <li key={point} className="text-brand-ink text-sm flex items-start">
                           <span className="text-brand-pink mr-3 font-bold">●</span>
                           <span>{point}</span>
                         </li>
@@ -227,7 +227,7 @@ export function Projects() {
                     <div className="pt-2">
                       <div className="flex items-center gap-2 mb-3">
                         <Target className="w-4 h-4 text-brand-pink" />
-                        <h4 className="font-accent text-sm tracking-widest font-semibold text-brand-ink">
+                        <h4 className="text-sm tracking-widest font-semibold text-brand-ink">
                           CIBLES
                         </h4>
                         <div className="flex-1 h-px bg-[#E8B5D4]/40" />
@@ -236,7 +236,7 @@ export function Projects() {
                         {activeCategory.cibles.map((cible) => (
                           <span
                             key={cible}
-                            className="font-accent inline-block px-3 py-1.5 text-xs rounded-full border text-brand-soft-ink"
+                            className="inline-block px-3 py-1.5 text-xs rounded-full border text-brand-soft-ink"
                             style={{
                               background: 'rgba(255, 214, 232, 0.3)',
                               borderColor: 'rgba(232, 70, 158, 0.2)',
@@ -403,7 +403,7 @@ export function Projects() {
           <div className="rounded-2xl bg-gradient-to-b from-[#F4A0C0] to-brand-pink p-[6px] shadow-[0_8px_30px_rgba(232,70,158,0.3)]">
             <div className="bg-white rounded-xl border-[2.5px] border-[#3D3027] overflow-hidden">
               <div className="bg-gradient-to-r from-[#F8D7E8] to-[#FBEAF2] border-b-[2.5px] border-[#3D3027] px-5 py-3 flex items-center justify-between">
-                <span className="font-accent text-[#3D3027] tracking-wider text-xs font-bold" style={{ letterSpacing: '0.15em' }}>
+                <span className="text-[#3D3027] tracking-wider text-xs font-bold" style={{ letterSpacing: '0.15em' }}>
                   UN PROJET EN TÊTE ?
                 </span>
                 <span className="text-[#3D3027] text-xs border border-[#3D3027] w-5 h-5 flex items-center justify-center">
@@ -425,7 +425,7 @@ export function Projects() {
               <div className="flex border-t-[2.5px] border-[#3D3027]">
                 <Link
                   to="/contact"
-                  className="font-accent flex-1 py-4 text-center text-brand-pink text-sm tracking-wider hover:bg-[#FDF2F7] transition-colors font-semibold"
+                  className="flex-1 py-4 text-center text-brand-pink text-sm tracking-wider hover:bg-[#FDF2F7] transition-colors font-semibold"
                   style={{ letterSpacing: '0.1em' }}
                 >
                   Me contacter 💌
@@ -433,7 +433,7 @@ export function Projects() {
                 <div className="w-[2.5px] bg-[#3D3027]" />
                 <Link
                   to="/projects"
-                  className="font-accent flex-1 py-4 text-center text-brand-mute text-sm tracking-wider hover:bg-[#F5F1ED] transition-colors font-semibold"
+                  className="flex-1 py-4 text-center text-brand-mute text-sm tracking-wider hover:bg-[#F5F1ED] transition-colors font-semibold"
                   style={{ letterSpacing: '0.1em' }}
                 >
                   Voir mes projets

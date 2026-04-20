@@ -57,10 +57,10 @@ export function Contact() {
           >
             <Paperclip className="w-10 h-10 text-[#E8B5D4] absolute -top-8 left-1/2 -translate-x-1/2 rotate-45 opacity-50" />
           </motion.div>
-          <h1 className="font-accent text-4xl md:text-8xl font-bold mb-4 md:mb-6 text-[#D4A5A5]">
+          <h1 className="text-4xl md:text-8xl font-bold mb-4 md:mb-6 text-[#D4A5A5]">
             Contactez-moi
           </h1>
-          <p className="font-accent text-brand-soft-ink text-base md:text-lg">
+          <p className="text-brand-soft-ink text-base md:text-lg">
             Une question, un projet ? N'hésitez pas à me contacter
           </p>
         </motion.div>
@@ -87,7 +87,7 @@ export function Contact() {
               <div>
                 <motion.label
                   htmlFor="name"
-                  className="font-accent block text-xs tracking-widest text-brand-mute mb-3 font-medium"
+                  className="block text-xs tracking-widest text-brand-mute mb-3 font-medium"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 }}
@@ -102,7 +102,7 @@ export function Contact() {
                   required
                   maxLength={200}
                   disabled={sending}
-                  className="font-accent w-full px-0 py-4 bg-transparent border-b-2 border-[#E8E5E0] focus:border-[#D4A5A5] focus:outline-none transition-colors disabled:opacity-60"
+                  className="w-full px-0 py-4 bg-transparent border-b-2 border-[#E8E5E0] focus:border-[#D4A5A5] focus:outline-none transition-colors disabled:opacity-60"
                   placeholder="Votre nom"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -114,7 +114,7 @@ export function Contact() {
               <div>
                 <motion.label
                   htmlFor="email"
-                  className="font-accent block text-xs tracking-widest text-brand-mute mb-3 font-medium"
+                  className="block text-xs tracking-widest text-brand-mute mb-3 font-medium"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 }}
@@ -129,7 +129,7 @@ export function Contact() {
                   required
                   maxLength={320}
                   disabled={sending}
-                  className="font-accent w-full px-0 py-4 bg-transparent border-b-2 border-[#E8E5E0] focus:border-[#D4A5A5] focus:outline-none transition-colors disabled:opacity-60"
+                  className="w-full px-0 py-4 bg-transparent border-b-2 border-[#E8E5E0] focus:border-[#D4A5A5] focus:outline-none transition-colors disabled:opacity-60"
                   placeholder="votre@email.fr"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -141,7 +141,7 @@ export function Contact() {
               <div>
                 <motion.label
                   htmlFor="message"
-                  className="font-accent block text-xs tracking-widest text-brand-mute mb-3 font-medium"
+                  className="block text-xs tracking-widest text-brand-mute mb-3 font-medium"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.7 }}
@@ -156,7 +156,7 @@ export function Contact() {
                   rows={6}
                   maxLength={5000}
                   disabled={sending}
-                  className="font-accent w-full px-0 py-4 bg-transparent border-b-2 border-[#E8E5E0] focus:border-[#D4A5A5] focus:outline-none transition-colors resize-none disabled:opacity-60"
+                  className="w-full px-0 py-4 bg-transparent border-b-2 border-[#E8E5E0] focus:border-[#D4A5A5] focus:outline-none transition-colors resize-none disabled:opacity-60"
                   placeholder="Parlez-moi de votre projet..."
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -170,7 +170,7 @@ export function Contact() {
                 disabled={sending}
                 whileHover={sending ? undefined : { scale: 1.02 }}
                 whileTap={sending ? undefined : { scale: 0.98 }}
-                className="font-accent w-full py-5 bg-[#D4A5A5] text-white text-xs tracking-widest hover:bg-[#C49595] transition-colors flex items-center justify-center gap-3 rounded-full shadow-lg font-medium disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full py-5 bg-[#D4A5A5] text-white text-xs tracking-widest hover:bg-[#C49595] transition-colors flex items-center justify-center gap-3 rounded-full shadow-lg font-medium disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 <Send className="w-4 h-4" />
                 {sending ? 'ENVOI EN COURS...' : 'ENVOYER LE MESSAGE'}
@@ -180,7 +180,7 @@ export function Contact() {
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="font-accent text-sm text-green-700 bg-green-50 border border-green-200 rounded-lg px-4 py-3"
+                  className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-lg px-4 py-3"
                   role="status"
                 >
                   Merci, votre message a bien été envoyé ✨
@@ -190,7 +190,7 @@ export function Contact() {
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="font-accent text-sm text-red-700 bg-red-50 border border-red-200 rounded-lg px-4 py-3"
+                  className="text-sm text-red-700 bg-red-50 border border-red-200 rounded-lg px-4 py-3"
                   role="alert"
                 >
                   {status.message}
@@ -219,10 +219,10 @@ export function Contact() {
                 <Paperclip className="w-16 h-16 text-white/10 absolute top-4 right-4 rotate-45" />
               </motion.div>
 
-              <h4 className="font-accent text-2xl font-semibold text-white mb-6">
+              <h4 className="text-2xl font-semibold text-white mb-6">
                 Services disponibles
               </h4>
-              <ul className="font-accent space-y-3 text-white/90">
+              <ul className="space-y-3 text-white/90">
                 {[
                   'Community Management',
                   'Création de Contenu',
@@ -248,7 +248,7 @@ export function Contact() {
           className="mt-32 max-w-2xl mx-auto"
         >
           <div className="text-center mb-12">
-            <h3 className="font-accent text-4xl font-bold mb-4 text-[#D4A5A5]">Mes Coordonnées</h3>
+            <h3 className="text-4xl font-bold mb-4 text-[#D4A5A5]">Mes Coordonnées</h3>
             <span className="font-hand text-brand-soft-ink text-base block">
               Cliquez sur l'enveloppe pour découvrir mes informations
             </span>
@@ -294,15 +294,15 @@ export function Contact() {
               >
                 <div className="p-4 md:p-8 space-y-3 md:space-y-4">
                   <div className="text-center mb-6">
-                    <p className="font-accent text-xs tracking-widest text-brand-mute mb-2">
+                    <p className="text-xs tracking-widest text-brand-mute mb-2">
                       LILY DE CHALONGE
                     </p>
-                    <h4 className="font-accent text-2xl font-bold italic text-[#D4A5A5]">
+                    <h4 className="text-2xl font-bold italic text-[#D4A5A5]">
                       Community Manager
                     </h4>
                   </div>
 
-                  <div className="font-accent space-y-3 text-sm">
+                  <div className="space-y-3 text-sm">
                     <div className="flex items-start gap-3">
                       <Mail className="w-4 h-4 text-brand-pink flex-shrink-0 mt-1" />
                       <div>
@@ -349,7 +349,7 @@ export function Contact() {
                     <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#E8B5D4] to-transparent" />
                   </div>
 
-                  <p className="font-accent text-xs text-center italic text-brand-mute leading-relaxed">
+                  <p className="text-xs text-center italic text-brand-mute leading-relaxed">
                     "Transformons vos idées en contenu qui inspire"
                   </p>
                 </div>
