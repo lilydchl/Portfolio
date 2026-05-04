@@ -178,10 +178,6 @@ export function Footer() {
             <span className="text-[#B8A89C] text-xs">Portfolio de Communication</span>
           </div>
 
-          <span className="text-xs text-[#D4A5A5] font-script">
-            made with <Heart className="w-3 h-3 inline text-brand-pink fill-[#E8469E] -mt-0.5" /> à Paris
-          </span>
-
           <motion.button
             onClick={scrollToTop}
             whileHover={{ y: -3, scale: 1.1 }}
