@@ -21,7 +21,7 @@ export function ShakeDuMoment() {
 
   return (
     <div className="min-h-screen bg-[#F5F1ED]">
-      <div className="relative bg-gradient-to-br from-[#E8E5E0] to-[#F5F3F0] py-20">
+      <div className="relative bg-gradient-to-br from-[#E8E5E0] to-[#F5F3F0] py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-8">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
