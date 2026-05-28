@@ -332,7 +332,7 @@ const TornNote = ({ text, rotate = 0, className = '', delay = 0 }: TornNoteProps
 
 export function MoodBoard() {
   return (
-    <div className="py-24 relative overflow-hidden">
+    <div className="py-8 sm:py-12 md:py-16 lg:py-24 relative overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -341,7 +341,7 @@ export function MoodBoard() {
         className="text-center mb-6 relative z-10"
       >
         <p className="font-script text-lg text-brand-pink mb-2">un peu de moi...</p>
-        <h2 className="font-serif text-6xl md:text-7xl font-bold text-brand-ink">Mon Univers</h2>
+        <h2 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-brand-ink">Mon Univers</h2>
         <p className="font-sans text-sm tracking-widest text-brand-mute mt-3 uppercase">
           Hobbies &amp; inspirations
         </p>
@@ -353,7 +353,7 @@ export function MoodBoard() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="relative rounded-2xl p-4 md:p-10 min-h-[600px] md:min-h-[800px] lg:min-h-[700px] overflow-hidden"
+          className="relative rounded-2xl p-4 md:p-10 min-h-[350px] sm:min-h-[500px] md:min-h-[800px] lg:min-h-[700px] overflow-hidden"
           style={{
             background:
               'linear-gradient(145deg, #D4B896 0%, #C4A882 30%, #B89E76 60%, #C9AD8A 100%)',
@@ -384,7 +384,7 @@ export function MoodBoard() {
           />
           <div className="absolute inset-0 rounded-2xl border-[3px] border-[#A08050]/30 pointer-events-none" />
 
-          <div className="relative z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-2 items-start">
+          <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-2 items-start">
             <div className="flex flex-col items-center md:items-start gap-6 md:gap-8 pt-4">
               <div className="relative">
                 <Pushpin className="absolute -top-4 left-1/2 -translate-x-1/2 z-20" color={pushpinColors.rose} size={22} />
