@@ -385,27 +385,6 @@ export const projectsList: Project[] = [
     ],
   },
   {
-    id: 'campagne-event',
-    name: 'Campagne réseaux sociaux événement',
-    category: 'yvently',
-    categoryLabel: 'Yvently',
-    date: '2024',
-    client: 'Yvently',
-    objectif:
-      'Créer et déployer des campagnes réseaux sociaux percutantes pour promouvoir les événements Yvently.',
-    contexte:
-      'Nécessité de générer du buzz et maximiser la participation aux événements via une présence sociale forte.',
-    cibles: ['Public général', 'Étudiants', 'Jeunes'],
-    solution:
-      'Stratégie de contenu avant/pendant/après événement, création de visuels attractifs, stories, reels, posts engageants.',
-    resultats: [
-      'Augmentation significative de la visibilité',
-      "Taux d'engagement élevé",
-      'Succès des événements promus',
-      'Croissance de la communauté Yvently',
-    ],
-  },
-  {
     id: 'invitation-design',
     name: 'Design invitations premium',
     category: 'yvently',
