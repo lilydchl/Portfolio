@@ -51,7 +51,7 @@ export function Home() {
             className="relative h-[400px] md:h-[600px] mx-auto w-full max-w-md md:max-w-none"
           >
             <motion.div
-              className="absolute top-0 left-0 w-48 md:w-72 rotate-[-3deg] shadow-2xl bg-white p-3 md:p-4"
+              className="absolute top-0 left-0 w-40 md:w-72 rotate-[-3deg] shadow-2xl bg-white p-3 md:p-4"
               whileHover={{ rotate: 0, scale: 1.05, transition: { duration: 0.3 } }}
             >
               <Image
@@ -63,7 +63,7 @@ export function Home() {
             </motion.div>
 
             <motion.div
-              className="absolute top-20 md:top-32 right-0 w-44 md:w-64 rotate-[1deg] shadow-xl bg-white p-3 md:p-4"
+              className="absolute top-20 md:top-32 right-0 w-36 md:w-64 rotate-[1deg] shadow-xl bg-white p-3 md:p-4"
               whileHover={{ rotate: 0, scale: 1.05, transition: { duration: 0.3 } }}
             >
               <Image
@@ -75,7 +75,7 @@ export function Home() {
             </motion.div>
 
             <motion.div
-              className="absolute bottom-0 left-8 md:left-20 w-36 md:w-48 rotate-[-2deg] bg-white p-4 md:p-6 shadow-lg border border-[#F8E3F0]/50"
+              className="absolute bottom-0 left-8 md:left-20 w-32 md:w-48 rotate-[-2deg] bg-white p-4 md:p-6 shadow-lg border border-[#F8E3F0]/50"
               whileHover={{ rotate: 2, scale: 1.05, transition: { duration: 0.3 } }}
             >
               <p className="text-sm italic text-brand-ink">
@@ -141,7 +141,7 @@ export function Home() {
             className="text-center space-y-2 md:space-y-3 relative"
           >
             <div className="flex justify-center relative">
-              <div className="relative w-64 h-[480px] md:w-80 md:h-[600px] bg-black rounded-[2.5rem] md:rounded-[3rem] p-3 md:p-4 shadow-2xl">
+              <div className="relative w-52 h-[400px] sm:w-64 sm:h-[480px] md:w-80 md:h-[600px] bg-black rounded-[2.5rem] md:rounded-[3rem] p-3 md:p-4 shadow-2xl">
                 <div className="absolute top-2 left-1/2 -translate-x-1/2 w-20 md:w-28 h-5 md:h-6 bg-black rounded-b-2xl z-10" />
                 <div className="w-full h-full bg-black rounded-[2rem] md:rounded-[2.5rem] overflow-hidden relative">
                   <iframe
