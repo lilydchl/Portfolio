@@ -198,7 +198,7 @@ export function About() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative mx-auto h-[500px] md:h-[900px]"
+          className="relative mx-auto h-[350px] sm:h-[500px] md:h-[900px]"
           style={{ maxWidth: '900px' }}
         >
           <motion.div
@@ -227,7 +227,7 @@ export function About() {
             initial={{ opacity: 0, rotate: 0 }}
             animate={{ opacity: 1, rotate: -4 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="absolute top-8 md:top-16 left-1/2 -translate-x-1/2 z-30 bg-[#F8F6F2] shadow-xl p-4 md:p-6 w-56 md:w-80 border-2 border-[#E8E5E0] rounded-[4px]"
+            className="absolute top-8 md:top-16 left-1/2 -translate-x-1/2 z-30 bg-[#F8F6F2] shadow-xl p-4 md:p-6 w-40 md:w-56 lg:w-80 border-2 border-[#E8E5E0] rounded-[4px]"
           >
             <div className="text-center">
               <p className="text-2xl tracking-widest mb-2 text-brand-ink">PORTFOLIO</p>
@@ -239,7 +239,7 @@ export function About() {
             initial={{ opacity: 0, rotate: 0 }}
             animate={{ opacity: 1, rotate: -5 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="absolute top-28 md:top-40 left-2 md:left-8 bg-white p-6 md:p-8 shadow-2xl z-20 w-[180px] md:w-[320px] overflow-hidden"
+            className="absolute top-28 md:top-40 left-2 md:left-8 bg-white p-6 md:p-8 shadow-2xl z-20 w-32 md:w-[180px] lg:w-[320px] overflow-hidden"
           >
             <div className="absolute -top-6 md:-top-8 left-1/2 -translate-x-1/2 text-3xl md:text-5xl z-30">🎀</div>
             <Image src={lilyPhoto} alt="Lily de Chalonge" className="w-full h-56 md:h-96 object-cover scale-110" />
@@ -249,7 +249,7 @@ export function About() {
             initial={{ opacity: 0, rotate: 0 }}
             animate={{ opacity: 1, rotate: 3 }}
             transition={{ duration: 0.6, delay: 0.9 }}
-            className="absolute bottom-16 md:bottom-32 right-2 md:right-16 bg-white p-2 md:p-3 shadow-2xl z-30 w-[160px] md:w-[280px]"
+            className="absolute bottom-16 md:bottom-32 right-2 md:right-16 bg-white p-2 md:p-3 shadow-2xl z-30 w-28 md:w-[160px] lg:w-[280px]"
           >
             <Image src={lilyPhoto2} alt="Lily de Chalonge" className="w-full h-48 md:h-80 object-cover" />
           </motion.div>
@@ -276,7 +276,7 @@ export function About() {
           className="text-center mt-16 mb-8"
         >
           <h2
-            className="text-4xl md:text-7xl font-bold mb-6 text-brand-ink"
+            className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-6 text-brand-ink"
             style={{ letterSpacing: '0.02em' }}
           >
             LILY DE CHALONGE
@@ -410,7 +410,7 @@ export function About() {
           <motion.a
             href={cvImageUrl}
             download="CV-Lily-de-Chalonge.png"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-brand-pink text-white text-xs tracking-widest hover:bg-[#D4307E] transition-all font-medium rounded-full shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-3 px-4 py-3 sm:px-6 sm:py-4 md:px-10 md:py-5 bg-brand-pink text-white text-xs tracking-widest hover:bg-[#D4307E] transition-all font-medium rounded-full shadow-lg hover:shadow-xl"
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
           >
