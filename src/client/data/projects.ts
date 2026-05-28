@@ -385,27 +385,6 @@ export const projectsList: Project[] = [
     ],
   },
   {
-    id: 'invitation-design',
-    name: 'Design invitations premium',
-    category: 'yvently',
-    categoryLabel: 'Yvently',
-    date: '2024',
-    client: 'Yvently',
-    objectif:
-      'Créer des invitations digitales et physiques premium pour les événements haut de gamme.',
-    contexte:
-      'Les clients Yvently recherchent des invitations élégantes et sophistiquées qui reflètent le standing de leurs événements.',
-    cibles: ['Invités', 'Partenaires', 'Fournisseurs'],
-    solution:
-      "Design d'invitations sur-mesure alliant élégance et modernité, formats digitaux interactifs et versions imprimées luxueuses.",
-    resultats: [
-      'Invitations au rendu exceptionnel',
-      'Satisfaction client maximale',
-      'Renforcement du positionnement premium',
-      'Maîtrise du design print et digital',
-    ],
-  },
-  {
     id: 'faire-part-mariage',
     name: 'Faire-part de mariage digital sur mesure',
     category: 'yvently',
