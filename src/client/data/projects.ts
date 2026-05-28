@@ -28,6 +28,7 @@ export interface Project {
   instagram?: string;
   subProjects?: SubProject[];
   visuels?: Visuel[];
+  preuves?: Visuel[];
 }
 
 export const projectsList: Project[] = [

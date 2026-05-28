@@ -11,6 +11,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Image as ImageIcon,
+  Award,
 } from 'lucide-react';
 import { Instagram } from '@/components/icons/brand';
 import { Link, useParams } from 'react-router';
@@ -79,6 +80,9 @@ export function ProjectDetail() {
   const cover = getCover(project.coverAsset);
   const activeVisuel = lightboxIndex !== null ? visuels[lightboxIndex] : null;
   const activeVisuelCover = activeVisuel ? getCover(activeVisuel.asset) : undefined;
+
+  const preuves = project.preuves ?? [];
+  const preuveSlots = Array.from({ length: Math.max(4, preuves.length) }, (_, i) => preuves[i]);
 
   return (
     <>
@@ -473,6 +477,71 @@ export function ProjectDetail() {
               </div>
             </motion.div>
           )}
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-4"
+          >
+            <div className="flex items-center justify-center gap-4 mb-12">
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#E8B5D4]/50" />
+              <div className="flex items-center gap-3">
+                <Award className="w-6 h-6 text-brand-pink" />
+                <h2 className="font-serif text-2xl md:text-4xl font-bold text-center text-brand-ink">
+                  Preuve
+                </h2>
+              </div>
+              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#E8B5D4]/50" />
+            </div>
+
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+              {preuveSlots.map((preuve, index) => {
+                const preuveCover = preuve ? getCover(preuve.asset) : undefined;
+
+                if (preuve && preuveCover) {
+                  return (
+                    <motion.figure
+                      key={preuve.asset}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: '-80px' }}
+                      transition={{ duration: 0.5, delay: index * 0.08 }}
+                      className="bg-white p-3 pb-4 shadow-xl"
+                    >
+                      <div className="aspect-[4/5] overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+                        <Image
+                          src={preuveCover}
+                          alt={preuve.label || `${project.name} - Preuve ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      {preuve.label && (
+                        <figcaption className="pt-3 text-center font-hand text-brand-ink text-sm">
+                          {preuve.label}
+                        </figcaption>
+                      )}
+                    </motion.figure>
+                  );
+                }
+
+                return (
+                  <motion.div
+                    key={`preuve-vide-${index}`}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-80px' }}
+                    transition={{ duration: 0.5, delay: index * 0.08 }}
+                    className="aspect-[4/5] border-2 border-dashed border-[#E8B5D4]/50 rounded-xl flex flex-col items-center justify-center text-center px-3 bg-[#FBEAF2]/30"
+                  >
+                    <ImageIcon className="w-8 h-8 md:w-10 md:h-10 text-[#E8B5D4] mb-3" />
+                    <p className="font-sans text-[#C4B5A5] text-xs md:text-sm">image à venir</p>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </motion.div>
         </div>
 
         <div className="py-16 md:py-24 bg-gradient-to-b from-[#FDF8F5] to-[#F9F0EC]">
