@@ -48,7 +48,7 @@ export function IglooProjectDetail() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center space-y-6 mb-12"
           >
-            <h1 className="text-6xl font-bold text-brand-rose">{project.name}</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-brand-rose">{project.name}</h1>
             <p className="text-sm tracking-widest text-brand-mute font-medium">
               L&apos;IGLOO • LE MONDE DE LA GLACE
             </p>
@@ -96,7 +96,7 @@ export function IglooProjectDetail() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-br from-brand-pink to-[#D4307E] p-12 rounded-3xl shadow-2xl"
+          className="bg-gradient-to-br from-brand-pink to-[#D4307E] p-6 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl shadow-2xl"
         >
           <h2 className="text-3xl font-bold text-white mb-8">Résultats</h2>
           <ul className="space-y-4">
@@ -125,17 +125,17 @@ export function IglooProjectDetail() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto px-8 text-center space-y-8"
         >
-          <h2 className="text-5xl font-bold text-brand-rose">Découvrez mes autres projets</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-brand-rose">Découvrez mes autres projets</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/igloo-projects"
-              className="inline-block px-12 py-5 bg-brand-pink text-white text-xs tracking-widest hover:bg-[#D4307E] transition-colors rounded-full shadow-lg hover:shadow-xl font-semibold"
+              className="inline-block px-6 py-3 sm:px-12 sm:py-5 bg-brand-pink text-white text-xs tracking-widest hover:bg-[#D4307E] transition-colors rounded-full shadow-lg hover:shadow-xl font-semibold"
             >
               AUTRES PROJETS L&apos;IGLOO
             </Link>
             <Link
               to="/projects"
-              className="inline-block px-12 py-5 bg-white text-brand-pink text-xs tracking-widest hover:bg-brand-cream transition-colors rounded-full shadow-lg hover:shadow-xl font-semibold"
+              className="inline-block px-6 py-3 sm:px-12 sm:py-5 bg-white text-brand-pink text-xs tracking-widest hover:bg-brand-cream transition-colors rounded-full shadow-lg hover:shadow-xl font-semibold"
             >
               TOUTES MES RÉALISATIONS
             </Link>
