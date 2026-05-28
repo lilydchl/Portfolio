@@ -250,27 +250,6 @@ export const projectsList: Project[] = [
     ],
   },
   {
-    id: 'pantoufle-pepere',
-    name: 'La pantoufle à pépère',
-    category: 'ecole-numerique',
-    categoryLabel: 'École du Numérique',
-    date: '2024',
-    client: 'École du Numérique',
-    objectif:
-      "Créer une campagne humoristique et décalée autour d'un concept inattendu pour démontrer la créativité.",
-    contexte:
-      'Projet libre permettant d\'explorer des territoires de communication non conventionnels avec humour et second degré.',
-    cibles: ['Public général', 'Étudiants', 'Jeunes'],
-    solution:
-      "Conception d'une identité visuelle décalée, création de contenus humoristiques pour les réseaux sociaux, ton de voix unique.",
-    resultats: [
-      'Démonstration de polyvalence créative',
-      "Maîtrise des codes de l'humour en communication",
-      'Capacité à sortir des sentiers battus',
-      'Projet mémorable et différenciant',
-    ],
-  },
-  {
     id: 'affiche-film-fictive',
     name: 'Affiche de film fictive',
     category: 'ecole-numerique',
