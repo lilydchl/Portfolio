@@ -21,11 +21,11 @@ export function ShakeDetail() {
 
   return (
     <div className="min-h-screen bg-brand-cream">
-      <div className="relative h-[500px] overflow-hidden">
+      <div className="relative h-64 md:h-[500px] overflow-hidden">
         {cover && <Image src={cover} alt={shake.name} className="w-full h-full object-cover" />}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
-        <div className="absolute inset-0 flex flex-col justify-between p-8">
+        <div className="absolute inset-0 flex flex-col justify-between p-4 md:p-8">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -45,7 +45,7 @@ export function ShakeDetail() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">{shake.name}</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4">{shake.name}</h1>
             <p className="text-white/90 text-lg flex items-center gap-2">
               <Calendar className="w-5 h-5" />
               {shake.date} • {shake.duree}
@@ -54,7 +54,7 @@ export function ShakeDetail() {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-8 py-16 space-y-12">
+      <div className="max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-16 space-y-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
