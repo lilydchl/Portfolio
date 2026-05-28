@@ -57,7 +57,7 @@ export function Contact() {
           >
             <Paperclip className="w-10 h-10 text-[#E8B5D4] absolute -top-8 left-1/2 -translate-x-1/2 rotate-45 opacity-50" />
           </motion.div>
-          <h1 className="text-4xl md:text-8xl font-bold mb-4 md:mb-6 text-[#D4A5A5]">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-4 md:mb-6 text-[#D4A5A5]">
             Contactez-moi
           </h1>
           <p className="text-brand-soft-ink text-base md:text-lg">
@@ -245,7 +245,7 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mt-32 max-w-2xl mx-auto"
+          className="mt-12 md:mt-32 max-w-2xl mx-auto"
         >
           <div className="text-center mb-12">
             <h3 className="text-4xl font-bold mb-4 text-[#D4A5A5]">Mes Coordonnées</h3>
@@ -257,14 +257,14 @@ export function Contact() {
           <div className="relative flex justify-center items-center min-h-[350px] md:min-h-[500px]">
             {!isEnvelopeOpen && (
               <motion.div
-                className="absolute -left-2 md:-left-16 -top-8 md:top-1/2 md:-translate-y-1/2 flex flex-col items-center gap-2 z-20"
+                className="absolute -left-1 sm:-left-8 md:-left-16 -top-8 md:top-1/2 md:-translate-y-1/2 flex flex-col items-center gap-2 z-20"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
                 viewport={{ once: true }}
               >
                 <motion.span
-                  className="font-hand block text-xl md:text-3xl text-brand-pink rotate-[-8deg]"
+                  className="font-hand block text-base sm:text-xl md:text-3xl text-brand-pink rotate-[-8deg]"
                   animate={{ rotate: [-8, -10, -8], y: [0, -3, 0] }}
                   transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                 >
@@ -286,7 +286,7 @@ export function Contact() {
               whileTap={{ scale: 0.95 }}
             >
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 w-[calc(100%-40px)] md:w-[380px] bg-white rounded-t-lg shadow-2xl z-10"
+                className="absolute left-1/2 -translate-x-1/2 w-[calc(100%-40px)] md:w-[320px] lg:w-[380px] bg-white rounded-t-lg shadow-2xl z-10"
                 initial={{ y: 0, opacity: 1 }}
                 animate={{ y: isEnvelopeOpen ? -280 : 0, opacity: isEnvelopeOpen ? 1 : 0 }}
                 transition={{ duration: 0.6, ease: 'easeInOut' }}
@@ -403,7 +403,7 @@ export function Contact() {
 
               {!isEnvelopeOpen && (
                 <motion.span
-                  className="font-hand absolute -bottom-12 left-1/2 -translate-x-1/2 text-sm text-brand-pink whitespace-nowrap block"
+                  className="font-hand absolute -bottom-12 left-1/2 -translate-x-1/2 text-sm text-brand-pink block"
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: 1 }}
                 >
