@@ -385,27 +385,6 @@ export const projectsList: Project[] = [
     ],
   },
   {
-    id: 'event-branding',
-    name: 'Branding événementiel',
-    category: 'yvently',
-    categoryLabel: 'Yvently',
-    date: '2024',
-    client: 'Yvently',
-    objectif:
-      'Développer des identités visuelles fortes et cohérentes pour divers événements organisés par Yvently.',
-    contexte:
-      'Besoin de créer des univers visuels uniques pour chaque événement tout en maintenant la signature Yvently.',
-    cibles: ['Public général', 'Étudiants', 'Jeunes'],
-    solution:
-      'Conception de chartes graphiques événementielles, création de logos temporaires, design de supports variés (affiches, flyers, réseaux sociaux).',
-    resultats: [
-      'Identités événementielles mémorables',
-      'Cohérence visuelle sur tous les supports',
-      'Reconnaissance de la marque Yvently',
-      "Portfolio riche d'événements variés",
-    ],
-  },
-  {
     id: 'campagne-event',
     name: 'Campagne réseaux sociaux événement',
     category: 'yvently',
