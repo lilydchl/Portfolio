@@ -114,13 +114,13 @@ export function ProjectDetail() {
           >
             <div className="overflow-hidden relative">
               <Pushpin
-                className="absolute -top-3 left-12 z-10"
+                className="absolute -top-3 left-4 md:left-12 z-10"
                 color={pushpinColors.rose}
                 size={24}
                 style={{ transform: 'rotate(-5deg)' }}
               />
               <Pushpin
-                className="absolute -top-3 right-12 z-10"
+                className="absolute -top-3 right-4 md:right-12 z-10"
                 color={pushpinColors.corail}
                 size={24}
                 style={{ transform: 'rotate(8deg)' }}
@@ -496,7 +496,7 @@ export function ProjectDetail() {
               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#E8B5D4]/50" />
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
               {preuveSlots.map((preuve, index) => {
                 const preuveCover = preuve ? getCover(preuve.asset) : undefined;
 
