@@ -324,9 +324,43 @@ export function ProjectDetail() {
             </motion.div>
           )}
 
-          <Section icon={<Lightbulb className="w-5 h-5 md:w-6 md:h-6 text-white" />} iconBg="#E8B5D4" title="Solution">
-            {project.solution}
-          </Section>
+          {Array.isArray(project.solution) ? (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center flex-shrink-0 bg-[#E8B5D4]">
+                  <Lightbulb className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                </div>
+                <h2 className="text-2xl md:text-4xl font-bold text-brand-ink">Solution</h2>
+              </div>
+              <ol className="space-y-5">
+                {project.solution.map((etape, index) => (
+                  <motion.li
+                    key={etape}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex items-start gap-4"
+                  >
+                    <span className="w-8 h-8 md:w-9 md:h-9 rounded-full bg-brand-pink text-white font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                      {index + 1}
+                    </span>
+                    <span className="text-base md:text-lg text-brand-soft-ink leading-relaxed">{etape}</span>
+                  </motion.li>
+                ))}
+              </ol>
+            </motion.div>
+          ) : (
+            <Section icon={<Lightbulb className="w-5 h-5 md:w-6 md:h-6 text-white" />} iconBg="#E8B5D4" title="Solution">
+              {project.solution}
+            </Section>
+          )}
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}

@@ -23,7 +23,7 @@ export interface Project {
   objectif: string;
   contexte: string;
   cibles: string[];
-  solution: string;
+  solution: string | string[];
   resultats: string[];
   instagram?: string;
   subProjects?: SubProject[];
@@ -155,8 +155,13 @@ export const projectsList: Project[] = [
     contexte:
       "L'exercice exigeait de créer un partenariat crédible malgré le paradoxe entre les deux univers, de respecter les valeurs de Billie Eilish (éthique, environnement, inclusion), de concevoir des livrables visuels cohérents entre eux malgré des identités très éloignées, et de produire plusieurs supports variés (print, digital, produit, branding) dans un temps limité. Les acteurs analysés incluaient Billie Eilish (artiste internationale engagée dans le véganisme), Pizza Hut (en recherche de renouvellement d'image), leurs fans et consommateurs respectifs, ainsi qu'un benchmark de collaborations artistiques existantes.",
     cibles: ['Fans de Billie Eilish', 'Consommateurs de Pizza Hut', 'Jeunes engagés (véganisme, environnement)', 'Amateurs de pop culture'],
-    solution:
-      "Méthodologie en 4 phases : 1) Veille exploratoire — analyse détaillée de l'artiste (style, couleurs, valeurs) et de Pizza Hut (positionnement, identité visuelle), benchmark de collaborations existantes via Instagram, TikTok, sites officiels et articles spécialisés. 2) Construction stratégique — mapping de positionnement, définition des cibles croisées, moodboard et copy stratégie complète (problématique, promesse, ton, preuves, message). 3) Création et production — pochette d'album dark-pop, pizza vegan édition limitée avec boîte personnalisée, landing page promotionnelle, mockups et visuels produits. 4) Mise en cohérence visuelle de l'ensemble avec une charte graphique ad hoc. Outils utilisés : Photoshop, Illustrator, Canva, Google Workspace.",
+    solution: [
+      "Veille exploratoire — analyse détaillée de l'artiste (style, couleurs, valeurs) et de Pizza Hut (positionnement, identité visuelle), benchmark de collaborations existantes via Instagram, TikTok, sites officiels et articles spécialisés.",
+      'Construction stratégique — mapping de positionnement, définition des cibles croisées, moodboard et copy stratégie complète (problématique, promesse, ton, preuves, message).',
+      "Création et production — pochette d'album dark-pop, pizza vegan édition limitée avec boîte personnalisée, landing page promotionnelle, mockups et visuels produits.",
+      'Mise en cohérence visuelle de l\'ensemble avec une charte graphique ad hoc.',
+      'Outils utilisés : Photoshop, Illustrator, Canva, Google Workspace.',
+    ],
     resultats: [
       "Pochette d'album fictive Billie Eilish x Pizza Hut",
       'Pizza vegan édition limitée + boîte personnalisée',
