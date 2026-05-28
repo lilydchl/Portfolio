@@ -129,7 +129,7 @@ export function Projects() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-3 md:flex md:flex-wrap justify-center gap-2 md:gap-4 mt-8 md:mt-12"
+          className="grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-wrap justify-center gap-2 md:gap-4 mt-8 md:mt-12"
         >
           {CATEGORY_FILTERS.map((filter) => (
             <FolderTabButton
@@ -173,8 +173,8 @@ export function Projects() {
                 }}
               />
 
-              <div className="absolute top-8 -left-4 z-20" style={{ transform: 'rotate(-15deg)' }}>
-                <svg width="80" height="120" viewBox="0 0 80 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <div className="absolute top-8 -left-4 z-20 w-12 sm:w-20" style={{ transform: 'rotate(-15deg)' }}>
+                <svg viewBox="0 0 80 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden className="w-full h-auto">
                   <path
                     d="M25 20 Q25 10, 35 10 L55 10 Q65 10, 65 20 L65 80 Q65 95, 50 95 L40 95 Q25 95, 25 80 Z"
                     stroke="#C0C0C0"
