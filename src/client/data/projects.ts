@@ -29,6 +29,7 @@ export interface Project {
   subProjects?: SubProject[];
   visuels?: Visuel[];
   preuves?: Visuel[];
+  invitationUrl?: string;
 }
 
 export const projectsList: Project[] = [
@@ -410,6 +411,7 @@ export const projectsList: Project[] = [
       'Retours enthousiastes des invités et du couple',
       'Démonstration de compétences en design digital et UX',
     ],
+    invitationUrl: '',
   },
   {
     id: 'soiree-april',

@@ -12,6 +12,7 @@ import {
   ChevronRight,
   Image as ImageIcon,
   Award,
+  Mail,
 } from 'lucide-react';
 import { Instagram } from '@/components/icons/brand';
 import { Link, useParams } from 'react-router';
@@ -190,7 +191,35 @@ export function ProjectDetail() {
             </motion.div>
           )}
 
-          {visuels.length > 0 ? (
+          {project.invitationUrl !== undefined ? (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="mb-16 flex flex-col items-center text-center"
+            >
+              <div className="flex items-center justify-center gap-4 mb-8 w-full max-w-md">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#E8B5D4]/50" />
+                <Mail className="w-6 h-6 text-brand-pink flex-shrink-0" />
+                <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#E8B5D4]/50" />
+              </div>
+              <p className="font-sans text-brand-soft-ink mb-6 max-w-md">
+                Plongez dans le faire-part digital interactif, pensé comme une véritable expérience pour les invités.
+              </p>
+              <motion.a
+                href={project.invitationUrl || undefined}
+                target={project.invitationUrl ? '_blank' : undefined}
+                rel={project.invitationUrl ? 'noopener noreferrer' : undefined}
+                whileHover={{ scale: 1.05, y: -3 }}
+                whileTap={{ scale: 0.95 }}
+                className="font-sans inline-flex items-center gap-3 px-8 py-4 md:px-10 md:py-5 bg-gradient-to-r from-brand-pink to-[#F0C8D8] text-white text-xs md:text-sm tracking-widest rounded-full shadow-lg hover:shadow-xl transition-all"
+              >
+                <Mail className="w-5 h-5" />
+                DÉCOUVRIR L&apos;INVITATION
+              </motion.a>
+            </motion.div>
+          ) : visuels.length > 0 ? (
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
