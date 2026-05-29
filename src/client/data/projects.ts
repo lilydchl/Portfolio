@@ -411,7 +411,7 @@ export const projectsList: Project[] = [
       'Retours enthousiastes des invités et du couple',
       'Démonstration de compétences en design digital et UX',
     ],
-    invitationUrl: '',
+    invitationUrl: 'https://omen-lift-01201595.figma.site/',
   },
   {
     id: 'soiree-april',
