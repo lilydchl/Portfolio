@@ -83,7 +83,10 @@ export function ProjectDetail() {
   const activeVisuelCover = activeVisuel ? getCover(activeVisuel.asset) : undefined;
 
   const preuves = project.preuves ?? [];
-  const preuveSlots = Array.from({ length: Math.max(4, preuves.length) }, (_, i) => preuves[i]);
+  const preuveSlots = Array.from(
+    { length: project.clientRequest ? preuves.length : Math.max(4, preuves.length) },
+    (_, i) => preuves[i],
+  );
 
   return (
     <>
@@ -525,6 +528,56 @@ export function ProjectDetail() {
               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#E8B5D4]/50" />
             </div>
 
+            {project.clientRequest && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-80px' }}
+                transition={{ duration: 0.6 }}
+                className="max-w-3xl mx-auto mb-10"
+              >
+                <div className="bg-white rounded-2xl shadow-xl border border-[#E8B5D4]/40 overflow-hidden">
+                  <div className="flex items-center gap-3 bg-gradient-to-r from-[#F8D7E8] to-[#FBEAF2] px-5 md:px-7 py-4 border-b border-[#E8B5D4]/40">
+                    <div className="w-10 h-10 rounded-full bg-brand-pink flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-5 h-5 text-white" />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="font-semibold text-brand-ink text-sm md:text-base">
+                        {project.clientRequest.senderName}
+                      </p>
+                      <p className="text-brand-mute text-xs md:text-sm">
+                        {project.clientRequest.senderRole}
+                        {project.clientRequest.company ? ` — ${project.clientRequest.company}` : ''} ·{' '}
+                        {project.clientRequest.date}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="px-5 md:px-7 py-5 md:py-6 space-y-4">
+                    <p className="font-sans text-brand-soft-ink leading-relaxed text-sm md:text-base">
+                      {project.clientRequest.intro}
+                    </p>
+                    <ul className="space-y-2.5">
+                      {project.clientRequest.items.map((item) => (
+                        <li key={item.label} className="flex items-start gap-3 text-sm md:text-base">
+                          <span className="w-1.5 h-1.5 rounded-full bg-brand-pink mt-2 flex-shrink-0" />
+                          <span className="text-brand-soft-ink">
+                            <span className="font-semibold text-brand-ink">{item.label} :</span> {item.value}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                    {project.clientRequest.outro && (
+                      <p className="font-sans text-brand-soft-ink leading-relaxed text-sm md:text-base">
+                        {project.clientRequest.outro}
+                      </p>
+                    )}
+                  </div>
+                </div>
+                <p className="text-center font-hand text-brand-mute text-sm mt-3">Demande initiale du client</p>
+              </motion.div>
+            )}
+
+            {preuveSlots.length > 0 && (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
               {preuveSlots.map((preuve, index) => {
                 const preuveCover = preuve ? getCover(preuve.asset) : undefined;
@@ -570,6 +623,7 @@ export function ProjectDetail() {
                 );
               })}
             </div>
+            )}
           </motion.div>
         </div>
 

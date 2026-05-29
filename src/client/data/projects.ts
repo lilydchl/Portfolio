@@ -11,6 +11,16 @@ export interface Visuel {
   label?: string;
 }
 
+export interface ClientRequest {
+  senderName: string;
+  senderRole: string;
+  company?: string;
+  date: string;
+  intro: string;
+  items: { label: string; value: string }[];
+  outro?: string;
+}
+
 export interface Project {
   id: string;
   name: string;
@@ -30,6 +40,7 @@ export interface Project {
   visuels?: Visuel[];
   preuves?: Visuel[];
   invitationUrl?: string;
+  clientRequest?: ClientRequest;
 }
 
 export const projectsList: Project[] = [
@@ -436,6 +447,26 @@ export const projectsList: Project[] = [
       'Mise en valeur de la capacité à organiser des événements complets et soignés',
       "Compétences mobilisées : gestion de projet événementiel, création graphique, coordination de prestataires, organisation sur site, personnalisation d'objets",
     ],
+    clientRequest: {
+      senderName: 'Élodie Hoarau',
+      senderRole: 'Chef des ventes Sud-Ouest',
+      company: 'April',
+      date: '22 septembre 2025',
+      intro:
+        "Dans le cadre de l'organisation de notre repas d'entreprise de fin d'année, nous souhaiterions recevoir une proposition incluant la privatisation d'un espace ainsi qu'un dîner ou cocktail dînatoire pour un groupe d'environ 40 personnes.",
+      items: [
+        { label: 'Date souhaitée', value: 'Vendredi 19 décembre 2025' },
+        { label: 'Localisation', value: 'Secteur Ouest' },
+        { label: 'Nombre de participants', value: '40 personnes' },
+        {
+          label: 'Prestations souhaitées',
+          value:
+            "Dîner ou cocktail dînatoire avec présence d'un DJ et installation d'un sapin de Noël pour créer une ambiance festive",
+        },
+      ],
+      outro:
+        "Nous vous remercions par avance pour votre retour et restons à votre disposition pour tout complément d'information.",
+    },
   },
   {
     id: 'animal-show',
