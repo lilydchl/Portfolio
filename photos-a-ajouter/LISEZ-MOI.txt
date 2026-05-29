@@ -1,0 +1,20 @@
+📸 BOÎTE DE DÉPÔT POUR TES PHOTOS
+
+Dépose ici les photos que tu veux que j'ajoute sur ton site.
+
+Comment faire (très simple) :
+1. Sur ton Mac, retrouve ta photo (sur le Bureau pour une capture d'écran,
+   dans « Téléchargements », ou exportée depuis l'app Photos).
+2. Glisse-la directement dans ce dossier « photos-a-ajouter », dans le
+   panneau de gauche de l'éditeur (la liste des fichiers).
+3. Dis-moi simplement : quelle photo, sur quelle page / quel projet elle doit
+   aller, et une petite légende si tu veux.
+
+Je m'occupe du reste : je la range au bon endroit dans ton site, je la relie
+à la bonne page, je sauvegarde et je mets en ligne.
+
+Astuce capture d'écran sur Mac : Cmd + Maj + 4 → la capture se range
+automatiquement sur ton Bureau, prête à être glissée ici.
+
+(Ce dossier est juste une boîte d'arrivée : une fois la photo placée sur le
+site, je la déplace au bon endroit, donc ce dossier reste vide.)
