@@ -83,10 +83,7 @@ export function ProjectDetail() {
   const activeVisuelCover = activeVisuel ? getCover(activeVisuel.asset) : undefined;
 
   const preuves = project.preuves ?? [];
-  const preuveSlots = Array.from(
-    { length: project.clientRequest ? preuves.length : Math.max(4, preuves.length) },
-    (_, i) => preuves[i],
-  );
+  const showPreuvePlaceholders = preuves.length === 0 && !project.clientRequest;
 
   return (
     <>
@@ -577,12 +574,12 @@ export function ProjectDetail() {
               </motion.div>
             )}
 
-            {preuveSlots.length > 0 && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
-              {preuveSlots.map((preuve, index) => {
-                const preuveCover = preuve ? getCover(preuve.asset) : undefined;
+            {preuves.length > 0 && (
+              <div className="max-w-md mx-auto space-y-8">
+                {preuves.map((preuve, index) => {
+                  const preuveCover = getCover(preuve.asset);
+                  if (!preuveCover) return null;
 
-                if (preuve && preuveCover) {
                   return (
                     <motion.figure
                       key={preuve.asset}
@@ -590,15 +587,13 @@ export function ProjectDetail() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, margin: '-80px' }}
                       transition={{ duration: 0.5, delay: index * 0.08 }}
-                      className="bg-white p-3 pb-4 shadow-xl"
+                      className="bg-white p-3 pb-4 shadow-xl rounded-sm"
                     >
-                      <div className="aspect-[4/5] overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
-                        <Image
-                          src={preuveCover}
-                          alt={preuve.label || `${project.name} - Preuve ${index + 1}`}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
+                      <Image
+                        src={preuveCover}
+                        alt={preuve.label || `${project.name} - Preuve ${index + 1}`}
+                        className="w-full h-auto rounded-sm"
+                      />
                       {preuve.label && (
                         <figcaption className="pt-3 text-center font-hand text-brand-ink text-sm">
                           {preuve.label}
@@ -606,9 +601,13 @@ export function ProjectDetail() {
                       )}
                     </motion.figure>
                   );
-                }
+                })}
+              </div>
+            )}
 
-                return (
+            {showPreuvePlaceholders && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+                {Array.from({ length: 4 }).map((_, index) => (
                   <motion.div
                     key={`preuve-vide-${index}`}
                     initial={{ opacity: 0, y: 20 }}
@@ -620,9 +619,8 @@ export function ProjectDetail() {
                     <ImageIcon className="w-8 h-8 md:w-10 md:h-10 text-[#E8B5D4] mb-3" />
                     <p className="font-sans text-[#C4B5A5] text-xs md:text-sm">image à venir</p>
                   </motion.div>
-                );
-              })}
-            </div>
+                ))}
+              </div>
             )}
           </motion.div>
         </div>
